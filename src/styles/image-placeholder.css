@@ -1,0 +1,23 @@
+.img-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: var(--cream);
+  border: 1.5px dashed rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.img-placeholder svg { opacity: 0.3; }
+
+.img-placeholder--dark {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.3);
+}

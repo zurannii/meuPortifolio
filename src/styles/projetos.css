@@ -1,0 +1,203 @@
+/* ─── HEADER ─── */
+.projetos__header {
+  padding: 96px 80px 64px;
+}
+
+.projetos__header h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(42px, 5vw, 68px); /* Aumentado para manter a consistência com as outras páginas */
+  font-weight: 400;
+  line-height: 1.1;
+  max-width: 620px;
+  margin-bottom: 24px;
+}
+
+/* Classe da linha dourada */
+.gold-line {
+  width: 60px;
+  height: 1px;
+  background-color: var(--gold);
+  margin-bottom: 32px;
+}
+
+.projetos__header p {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 560px;
+  line-height: 1.75;
+}
+
+/* ─── PROJETO CARD ─── */
+.projetos__lista {
+  padding-bottom: 80px;
+}
+
+.projeto {
+  padding: 0 80px;
+  margin-bottom: 120px; /* Mais respiro entre os projetos */
+}
+
+.projeto__meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border); /* Linha divisória movida para cima do título */
+}
+
+.projeto__num {
+  font-family: var(--font-serif);
+  font-size: 14px;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+}
+
+.projeto__year {
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+}
+
+.projeto__grid {
+  display: grid;
+  /* Proporção 1.3 para 1 foca mais na imagem do produto/interface */
+  grid-template-columns: 1.3fr 1fr;
+  gap: 80px;
+  align-items: center; /* Centraliza verticalmente a imagem e o texto */
+}
+
+/* ─── ALTERNÂNCIA DE GRID (O SEGREDO DO EDITORIAL) ─── */
+/* Inverte a ordem para projetos pares no desktop */
+.projeto:nth-child(even) .projeto__grid {
+  grid-template-columns: 1fr 1.3fr; /* Inverte a proporção */
+}
+.projeto:nth-child(even) .projeto__image-wrapper {
+  order: 2; /* Joga a imagem para a direita */
+}
+.projeto:nth-child(even) .projeto__content {
+  order: 1; /* Joga o texto para a esquerda */
+}
+
+/* ─── TAGS ─── */
+.projeto__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.tag {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+}
+
+.tag + .tag::before {
+  content: '·';
+  margin-right: 8px;
+  color: var(--border);
+}
+
+/* ─── CONTENT ─── */
+.projeto__content h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 3.5vw, 48px); /* Títulos de projeto com mais peso */
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 24px;
+  color: var(--black);
+}
+
+.projeto__content p {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+/* ─── IMPACTO ─── */
+.projeto__impacto-title {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--black);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.projeto__impacto-list { 
+  list-style: none; 
+  padding: 0;
+}
+
+.projeto__impacto-list li {
+  font-size: 14px;
+  color: var(--muted);
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.projeto__impacto-list li:last-child {
+  border-bottom: none;
+}
+
+.projeto__impacto-list li::before {
+  content: '—';
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+/* ─── LINK BEHANCE ─── */
+.projeto__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--black);
+  text-decoration: none;
+  margin-top: 32px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--black);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.projeto__link:hover { 
+  opacity: 0.7; 
+  padding-bottom: 8px; /* Leve animação na borda inferior */
+}
+
+.projeto__link--disabled {
+  color: var(--muted);
+  border-bottom-color: var(--border);
+  cursor: default;
+  opacity: 0.6;
+}
+
+.projeto__link--disabled:hover { 
+  opacity: 0.6; 
+  padding-bottom: 6px;
+}
+
+/* ─── MOBILE ─── */
+@media (max-width: 900px) {
+  .projetos__header { padding: 64px 24px 48px; }
+  .projeto { padding: 0 24px; margin-bottom: 80px; }
+  
+  .projeto__grid, 
+  .projeto:nth-child(even) .projeto__grid { 
+    grid-template-columns: 1fr; /* Força 1 coluna em mobile para todos */
+    gap: 40px; 
+  }
+  
+  .projeto:nth-child(even) .projeto__image-wrapper { order: 1; }
+  .projeto:nth-child(even) .projeto__content { order: 2; }
+}

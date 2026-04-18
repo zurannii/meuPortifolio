@@ -1,0 +1,202 @@
+.processo__header {
+  padding: 96px 80px 64px;
+}
+
+.processo__header h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(42px, 5vw, 68px); 
+  font-weight: 400;
+  line-height: 1.1;
+  max-width: 600px;
+  margin-bottom: 24px;
+}
+
+.gold-line {
+  width: 60px;
+  height: 1px;
+  background-color: var(--gold);
+  margin-bottom: 32px;
+}
+
+.processo__header p {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 560px;
+  line-height: 1.75;
+}
+
+.etapas { padding: 0 80px 80px; }
+
+.etapa {
+  display: grid;
+  grid-template-columns: 80px 1.2fr 1fr; 
+  gap: 40px 64px;
+  padding: 56px 0;
+  border-top: 1px solid var(--border);
+  align-items: start;
+}
+
+.etapa__num {
+  font-family: var(--font-serif);
+  font-size: 96px; 
+  color: rgba(11, 11, 11, 0.08);
+  letter-spacing: 0.04em;
+  padding-top: 4px;
+}
+
+.etapa__content h3 {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 16px;
+  color: var(--black);
+}
+
+.etapa__content p {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 90%;
+}
+
+.etapa__entregas {
+  padding-left: 48px;
+  border-left: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.etapa__entregas-label {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.etapa__entregas ul { list-style: none; padding: 0; margin: 0; }
+
+.etapa__entregas li {
+  font-size: 14px;
+  color: var(--black);
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.etapa__entregas li:last-child {
+  border-bottom: none; /* Remove a borda do último item */
+}
+
+.etapa__entregas li::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  background: var(--gold);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ─── PRINCÍPIOS ─── */
+.principios {
+  background: var(--dark);
+  padding: 120px 80px; /* Mais respiro vertical */
+  color: #fff;
+}
+
+.principios .section-label { color: var(--gold); margin-bottom: 16px;}
+
+.principios h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 400;
+  margin-bottom: 80px;
+}
+
+.principios__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px 96px; /* Gap maior para visual mais limpo */
+}
+
+.principio h4 {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.principio p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.8;
+}
+
+/* ─── FERRAMENTAS ─── */
+.tools { padding: 120px 80px; }
+
+.tools h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.tools > p {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 580px;
+  margin-bottom: 56px;
+  line-height: 1.75;
+}
+
+.tools__grid { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 12px; 
+}
+
+.tool-chip {
+  padding: 10px 20px;
+  background: transparent; /* Mais sofisticado que fundo sólido */
+  border: 1px solid var(--border);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--black);
+  border-radius: 4px; /* Opcional: cantos levemente arredondados */
+  transition: all 0.3s ease;
+}
+
+.tool-chip:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* ─── MOBILE ─── */
+@media (max-width: 900px) {
+  .processo__header { padding: 64px 24px 48px; }
+
+  .etapas { padding: 0 24px 64px; }
+  
+  .etapa { 
+    grid-template-columns: 1fr; /* Muda para 1 coluna no mobile */
+    gap: 32px; 
+    padding: 48px 0;
+  }
+  
+  .etapa__num { margin-bottom: -16px; } /* Aproxima o número do título */
+  
+  .etapa__entregas { 
+    grid-column: 1; /* Volta para o fluxo normal */
+    padding-left: 0; 
+    border-left: none; 
+    padding-top: 32px;
+    border-top: 1px solid rgba(0,0,0,0.06); /* Linha divisória muda para cima */
+  }
+
+  .principios { padding: 80px 24px; }
+  .principios__grid { grid-template-columns: 1fr; gap: 48px; }
+
+  .tools { padding: 80px 24px; }
+}
