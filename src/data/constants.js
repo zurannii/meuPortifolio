@@ -1,6 +1,5 @@
 // ─── CONFIG ───────────────────────────────────────────────────────────────────
-// Substitua pelo seu ID do Formspree: https://formspree.io → New Form → copie o ID
-export const FORMSPREE_ID = "SEU_ID_AQUI";
+export const FORMSPREE_ID = "xvzdawrj";
 
 // ─── NAVIGATION ───────────────────────────────────────────────────────────────
 export const NAV_LINKS = ["projetos", "processo", "sobre", "contato"];
@@ -9,8 +8,7 @@ export const NAV_LINKS = ["projetos", "processo", "sobre", "contato"];
 export const SOCIAL_LINKS = [
   { name: "LinkedIn",  href: "https://linkedin.com/in/zurannii" },
   { name: "Instagram", href: "https://instagram.com/techbyzuran" },
-  { name: "Behance",   href: "https://behance.net" },
-  { name: "Dribbble",  href: "https://dribbble.com" },
+  { name: "Behance",   href: "https://www.behance.net/robertanascime8" },
 ];
 
 // ─── HOME ─────────────────────────────────────────────────────────────────────
@@ -33,9 +31,8 @@ export const PROJETOS = [
       "Prototipagem de Interação por Voz",
       "Redução de esforço físico",
     ],
-    // Substitua null pela URL do Behance quando disponível
-    behance: null,
-    imgLabel: "L'Écho — Imagem do projeto",
+    behance: "https://www.behance.net/gallery/247724309/Caso-de-estudo-LEcho",
+    image: "/lecho.png",
   },
   {
     num: "02",
@@ -49,7 +46,7 @@ export const PROJETOS = [
       "Fortalecimento da identidade visual da marca no digital",
     ],
     behance: null,
-    imgLabel: "Rock & Ribs — Imagem do projeto",
+    image: "/rock.png",
   },
   {
     num: "03",
@@ -62,11 +59,11 @@ export const PROJETOS = [
       "Aumento do reconhecimento de marca no setor",
       "Sistema de design escalável para futuras features",
     ],
-    behance: null,
-    imgLabel: "Passabot — Imagem do projeto",
+    behance: "https://www.behance.net/gallery/244811253/PassaBot-ID-visual",
+    /* Lembre-se de colocar a imagem do Passabot na pasta public com esse nome (ou altere aqui para o nome real do arquivo) */
+    image: "/passabot.png", 
   },
 ];
-
 // ─── PROCESSO ─────────────────────────────────────────────────────────────────
 export const ETAPAS = [
   {
@@ -115,9 +112,18 @@ export const PRINCIPIOS = [
 ];
 
 export const TOOLS = [
-  "Figma", "Adobe CC", "Protopie", "Metodologias Ágeis",
-  "React", "TypeScript", "CSS", "Angular",
-  "Design Thinking", "UX Research", "VSCode", "Notion",
+  "Figma", "Protopie", "Metodologias Ágeis",
+  "React", "TypeScript", "JavaScript", "HTML", "CSS", "Angular",
+  "Node.js", "Python", "Java",
+  "Design Thinking", "UX Research", "UX Design", "UI Design",
+  "Wireframing", "Prototyping", "User Flows", "Usability Testing",
+  "Design Systems", "Responsive Design", "Mobile First",
+  "Scrum", "Kanban", "Product Thinking",
+  "VSCode", "Git", "GitHub", "Notion",
+  "Acessibilidade", "Interação Humano-Computador",
+  "AI aplicada ao Design", "Prompt Engineering",
+  "Generative AI", "Design Assistido por IA",
+  "Vibe Coding", "No-code",
 ];
 
 // ─── SOBRE ────────────────────────────────────────────────────────────────────
@@ -135,10 +141,30 @@ export const VALORES = [
 ];
 
 export const TRAJETORIA = [
-  { year: "2024", role: "Senior Product Designer", company: "Tech Unicorn",    desc: "Liderança de design em produtos B2B complexos. Foco em escalabilidade e sistemas." },
-  { year: "2022", role: "Lead UX/UI Designer",     company: "Digital Agency",  desc: "Gestão de equipe multidisciplinar. Projetos para marcas premium e startups." },
-  { year: "2020", role: "Product Designer",         company: "FinTech Startup", desc: "Construção de produto 0 a 1. Pesquisa, prototipagem e testes com usuários." },
-  { year: "2019", role: "UI Designer",              company: "Software House",  desc: "Primeiros passos em design de produto. Aprendizado através de volume e variedade." },
+  {
+    year: "2026",
+    role: "UX/UI Designer & Pesquisadora",
+    company: "Campus Mobile / PIBIC",
+    desc: "Participação na Campus Mobile em São Paulo, com visitas técnicas à Claro e USP. Atuação em iniciação científica (PIBIC) e desenvolvimento de pré-projeto de mestrado focado em design e tecnologia."
+  },
+  {
+    year: "2025",
+    role: "Mentora de UI/UX & Designer",
+    company: "Hacker Cidadão / TechWoman / ByteGirls",
+    desc: "Mentoria em UX/UI em eventos de inovação da Prefeitura do Recife e TechWoman. Atuação como freelancer e staff designer da comunidade ByteGirls, com participação em hackathons e conquistas em pódios."
+  },
+  {
+    year: "2024",
+    role: "UX/UI Designer",
+    company: "Hackathons & Projetos",
+    desc: "Transição para design e tecnologia, participando ativamente de hackathons, com premiações e desenvolvimento de soluções digitais focadas em experiência do usuário."
+  },
+  {
+    year: "2023",
+    role: "Estudante de Design Gráfico",
+    company: "Formação Inicial",
+    desc: "Início da trajetória no design, com foco em fundamentos visuais, criatividade e construção de base para atuação em produtos digitais."
+  }
 ];
 
 // ─── CONTATO ──────────────────────────────────────────────────────────────────
@@ -155,11 +181,11 @@ export const MODALIDADES = [
   "Mentoria e workshops",
 ];
 
-export const TIPOS_PROJETO = ["UI/UX Design", "Design System", "Product Design", "Branding", "Mentoria"];
+export const TIPOS_PROJETO = ["UI/UX Design", "Design Research", "Product Design", "Branding", "Mentoria, Workshops", "Projetos completos (do conceito à implementação)"];
 
 export const ORCAMENTOS = [
-  "Até R$ 5.000",
-  "R$ 5.000 – R$ 15.000",
-  "R$ 15.000 – R$ 30.000",
-  "Acima de R$ 30.000",
+  "Até R$ 3.000",
+  "R$ 3.000 – R$ 5.000",
+  "R$ 5.000 – R$ 10.000",
+  "Acima de R$ 10.000",
 ];

@@ -3,9 +3,6 @@ import ImagePlaceholder from "../components/ImagePlaceholder";
 import { ESPECIALIDADES, VALORES, TRAJETORIA } from "../data/constants";
 import "../styles/sobre.css";
 
-/**
- * Sobre — página com bio, especialidades, valores, trajetória e reconhecimentos.
- */
 export default function Sobre({ navigate }) {
   return (
     <div className="page">
@@ -34,9 +31,12 @@ export default function Sobre({ navigate }) {
           </p>
         </div>
 
-        {/* Substitua por <img src="..." alt="Roberta" /> quando tiver a foto */}
         <div className="fade-in delay-2">
-          <ImagePlaceholder label="Foto da Roberta" style={{ aspectRatio: "3/4" }} />
+        <img 
+          src="/robrob.png" 
+          alt="Roberta" 
+          className="sobre__img" 
+         />
         </div>
       </section>
 

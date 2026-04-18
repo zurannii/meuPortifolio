@@ -22,6 +22,14 @@
   margin-bottom: 16px;
 }
 
+.sobre__img {
+  width: 90%;         
+  height: auto;        
+  aspect-ratio: 3 / 4; 
+  object-fit: cover;   
+  display: block;      
+}
+
 /* ─── ESPECIALIDADES ─── */
 .especialidades {
   padding: 72px 80px;

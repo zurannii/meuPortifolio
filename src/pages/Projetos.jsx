@@ -15,12 +15,14 @@ function ProjetoCard({ projeto }) {
       </div>
 
       <div className="projeto__grid">
-        {/* Wrapper de imagem adicionado para controle de grid e hover */}
         <div className="projeto__image-wrapper">
-          <ImagePlaceholder label={projeto.imgLabel} style={{ aspectRatio: "4/3", width: "100%", objectFit: "cover" }} />
+          <img 
+            src={projeto.image} 
+            alt={`Mockup do projeto ${projeto.title}`} 
+            className="projeto__image"
+          />
         </div>
 
-        {/* Conteúdo */}
         <div className="projeto__content">
           <div className="projeto__tags">
             {projeto.tags.map((tag) => (
@@ -58,9 +60,6 @@ function ProjetoCard({ projeto }) {
   );
 }
 
-/**
- * Projetos — listagem de projetos do portfólio.
- */
 export default function Projetos({ navigate }) {
   return (
     <div className="page">
@@ -68,7 +67,6 @@ export default function Projetos({ navigate }) {
         <div className="section-label fade-in">Portfólio Selecionado</div>
         <h1 className="fade-in delay-1">Projetos que definem padrões</h1>
         
-        {/* Linha dourada inserida */}
         <div className="gold-line fade-in delay-1" />
         
         <p className="fade-in delay-2">
