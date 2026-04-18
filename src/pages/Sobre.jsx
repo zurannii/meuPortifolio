@@ -83,7 +83,7 @@ export default function Sobre({ navigate }) {
       </section>
 
       {/* ─── RECONHECIMENTO ─── */}
-      <section className="reconhecimento">
+     {/*  <section className="reconhecimento">
         <div className="section-label">Reconhecimento</div>
         <p>
           Trabalhos apresentados em publicações de design como Awwwards,
@@ -94,7 +94,7 @@ export default function Sobre({ navigate }) {
           Prêmios são validação, mas o reconhecimento mais importante vem de
           clientes que retornam, usuários satisfeitos e produtos que realmente funcionam.
         </p>
-      </section>
+      </section> */}
 
       <Footer navigate={navigate} />
     </div>
